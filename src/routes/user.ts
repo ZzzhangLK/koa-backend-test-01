@@ -10,14 +10,14 @@ import {
 
 const router = new Router();
 
-// General routes
+// 通用路由
 router.get('/', getGreeting);
 
-// User collection routes
+// 用户集合路由
 router.get('/users', getUsers);
-router.post('/users', createUser); // Changed from /user to /users for consistency
+router.post('/users', createUser); // 为了保持一致性，从 /user 改为 /users
 
-// User specific routes
+// 特定用户路由
 router.get('/users/:id', getUserById);
 router.put('/users/:id', updateUser);
 router.delete('/users/:id', deleteUser);

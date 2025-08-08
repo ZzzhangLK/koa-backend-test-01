@@ -1,23 +1,23 @@
 {
   "compilerOptions": {
-    // --- Module Settings ---
+    // --- 模块设置 ---
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "esModuleInterop": true,
 
-    // --- Output Settings ---
+    // --- 输出设置 ---
     "outDir": "./dist",
     "rootDir": "./src",
 
-    // --- Strictness & Quality ---
+    // --- 严格性与质量 ---
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
 
-    // --- Source Maps for Debugging ---
+    // --- 用于调试的 Source Maps ---
     "sourceMap": true,
     "declaration": true
   },
-  "include": ["src/**/*.ts"], // Only compile files in the src directory
-  "exclude": ["node_modules", "dist"] // Don't compile node_modules or the output directory
+  "include": ["src/**/*.ts"], // 只编译 src 目录下的文件
+  "exclude": ["node_modules", "dist"] // 不编译 node_modules 和输出目录
 }

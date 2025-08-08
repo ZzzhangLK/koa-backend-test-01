@@ -29,7 +29,7 @@ export const getUserById = async (ctx: Context) => {
 
 export const updateUser = async (ctx: Context) => {
   const { id } = ctx.params;
-  const { username, email } = ctx.request.body as Partial<User>; // 使用 Partial<User> 因为更新时可能只提供部分字段
+  const { username, email } = ctx.request.body as Partial<User>; // 使用 Partial<User> 是因为更新时可能只提供部分字段
 
   // 模拟更新数据库
   console.log(`正在更新 ID 为 ${id} 的用户，新数据为:`, { username, email });
@@ -51,14 +51,14 @@ export const createUser = async (ctx: Context) => {
   const { username, email } = ctx.request.body as User;
 
   // --- 数据校验开始 ---
-  if (!username || typeof username !== 'string' || username.trim() === '') {
+  if (!username || username.trim() === '') {
     return sendError(
       ctx,
       ResponseCode.BAD_REQUEST,
       '用户名是必填项，且必须为非空字符串',
     );
   }
-  if (!email || typeof email !== 'string' || !/\S+@\S+\.\S+/.test(email)) {
+  if (!email || !/\S+@\S+\.\S+/.test(email)) {
     return sendError(
       ctx,
       ResponseCode.BAD_REQUEST,
