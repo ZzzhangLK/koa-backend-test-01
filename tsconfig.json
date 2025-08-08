@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    // --- Module Settings ---
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "esModuleInterop": true,
+
+    // --- Output Settings ---
+    "outDir": "./dist",
+    "rootDir": "./src",
+
+    // --- Strictness & Quality ---
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // --- Source Maps for Debugging ---
+    "sourceMap": true,
+    "declaration": true
+  },
+  "include": ["src/**/*.ts"], // Only compile files in the src directory
+  "exclude": ["node_modules", "dist"] // Don't compile node_modules or the output directory
+}
